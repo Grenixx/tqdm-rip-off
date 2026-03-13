@@ -5,7 +5,6 @@
 #include <windows.h>
 #endif
 
-// Niveaux de remplissage
 const char *blocks[] = {" ", "▏", "▎", "▍", "▌", "▋", "▊", "▉", "█"};
 #define BLOCKS 8
 
@@ -30,7 +29,7 @@ void progress_bar(long long current, long long total)
         return;
     last_percent = percent;
 
-    int width = 30; // largeur de la barre
+    int width = 30;
     double ratio = (double)current / total;
     double filled_blocks = ratio * width * BLOCKS;
     int full = (int)(filled_blocks / BLOCKS);
